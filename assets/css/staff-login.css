@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+:root{
+  --primary: #a11c27;
+  --secondary: #b31310;
+
+  --transparent: #ffffff00;
+
+  --white: #fcfcfc;
+  --black: #272727;
+
+  --font-family: "Jost", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f6f8fa;
+  color: #222;
+}
+.login_page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+}
+
+/* --- FIGURE CONTAINER SHRINK/RESPONSIVE --- */
+.figure_container {
+  width: 55%;
+  min-width: 330px;
+  background: linear-gradient(180deg, #DE4447 0%, #571D1E 90.87%);
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 15px 12px rgba(0, 0, 0, 0.6);
+  transition: width 0.3s, height 0.3s, border-radius 0.3s;
+}
+.figure_logo_bg {
+  position: absolute;
+  left: -30%;
+  top: 0;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 0;
+  object-fit: cover;
+}
+.figure_text {
+  position: relative;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  gap: 12px;
+  z-index: 2;
+  margin-left: 40%;
+  color: #fff;
+  font-family: "Zilla Slab", serif;
+  font-weight: 1000;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-shadow: 5px 2px 8px rgb(0, 0, 0);
+}
+.text_1 { color: #fffdfd; }
+.text_2 { color: #fffdfd; }
+.text_3 { color: #fffdfd; }
+
+.login_container {
+  width: 50%;
+  min-width: 400px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 24px;
+  position: relative;
+  transition: width 0.3s;
+}
+.login-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto 12px auto;
+  display: relative;
+}
+.login_dots_bg {
+  background-image: radial-gradient(#ddd 1.58px, transparent 0.65px);
+  background-size: 20px 20px;
+}
+.login-heading {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: bold;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.login-subheading {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.login_form {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-end;
+}
+.login_label {
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  font-weight: 400;
+  align-self: flex-start !important;
+  text-align: left;
+  width: 100%;
+}
+.login_input_group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* --- INPUTS ALWAYS SAME SIZE --- */
+.login_input,
+.login_input.login_username,
+.login_input.login_password {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 48px !important;
+  font-size: 1rem !important;
+  padding: 8px 38px 8px 48px !important;
+  border: none !important;
+  border-bottom: 2px solid #000 !important;
+  border-radius: 11px 11px 0 0; 
+  background: #fff;
+  margin-bottom: 0;
+  transition: border-bottom-color 0.18s ease, border-bottom-width 0.18s ease;
+}
+
+.login_input:focus {
+  border-bottom-color: #DE4447 !important;
+  border-bottom-width: 3px !important;
+  outline: none;
+  box-shadow: none;
+}
+.login_input[style] {
+  font-size: 1rem !important;
+}
+.login_input_icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #222;
+  opacity: 0.8;
+}
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+.password-toggle:hover {
+  opacity: 1;
+}
+.password-toggle svg {
+  width: 22px;
+  height: 22px;
+  fill: #888;
+}
+
+@media (max-width: 767px) {
+  /* Extra space between icons and inputs on mobile */
+  .login_input,
+  .login_input.login_username,
+  .login_input.login_password {
+    padding-left: 58px !important;
+  }
+  .login_input_icon {
+    left: 16px;
+  }
+}
+.forgot_password {
+  color: #222;
+  text-decoration: underline;
+  margin-bottom: 18px;
+  font-size: 0.75rem;
+  text-align: right;
+  display: inline;
+  transition: color 0.2s;
+  padding: 0;
+  background: none;
+  width: auto;
+  cursor: pointer;
+  line-height: 1;
+}
+.forgot_password:hover {
+  color: #DE4447;
+  background: none;
+}
+.form-warning {
+  color: #DE4447;
+  font-size: 0.93rem;
+  margin-bottom: 10px;
+  text-align: left;
+  display: none;
+  font-family: 'Jost', Arial, sans-serif;
+}
+.login_button {
+  width: 100%;
+  padding: 9px 0;
+  background:#c02e32;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 9px;
+  margin-top: 12px;
+  box-shadow: 0px 2px 10px rgba(222,68,71,0.10);
+  cursor: pointer;
+  
+}
+.login_button:hover,
+.login_button:focus {
+  background: linear-gradient(90deg, #DE4447 100%);
+  transform: scale(1.6s);
+  outline: none;
+}
+
+/* --- Back arrow always top left, overlays whole page --- */
+.back-to-home {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 110;
+  background: rgba(255,255,255,0.85);
+  color: #000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 12px 24px 36px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;          
+  height: 56px;
+  transition: width 0.5s cubic-bezier(.4,2,.6,1), background 0.2s, color 0.2s;
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+  cursor: pointer;
+}
+  
+.back-to-home .home-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  margin: 0;
+  transition: filter 0.2s;
+}
+  
+.back-to-home .home-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+  
+.back-to-home .home-text {
+  opacity: 0;
+  width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: opacity 0.2s, width 0.3s, margin-left 0.3s;
+  font-size: 1.1rem;
+  color: inherit;
+  pointer-events: none;
+}
+  
+.back-to-home:hover, .back-to-home:focus-visible {
+  width: 140px;
+  background: #fff;
+  color: var(--primary);
+}
+  
+.back-to-home:hover .home-icon,
+.back-to-home:focus-visible .home-icon {
+  background-image: url('../images/home_red.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.back-to-home:hover .home-icon img,
+.back-to-home:focus-visible .home-icon img {
+  opacity: 0;
+}
+  
+.back-to-home:hover .home-text,
+.back-to-home:focus-visible .home-text {
+  opacity: 1;
+  width: auto;
+  margin-left: 12px;
+  pointer-events: auto;
+}
+
+/* --- RESPONSIVE LAYOUTS --- */
+/* Desktop */
+@media (min-width: 1100px) {
+  .login_page {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .figure_container {
+    display: flex !important;
+    width: 50%;
+    min-width: 330px;
+    height: auto;
+    border-radius: 0 50px 50px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+  }
+  .figure_text {
+    font-size: 2.2rem;
+    margin-left: 40%;
+    padding-right: 40px;
+    align-items: flex-end;
+  }
+  .login_container {
+    width: 50%;
+    min-width: 400px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+/* Tablet */
+@media (max-width: 1099px) and (min-width: 700px) {
+  .login_page {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .figure_container {
+    display: flex !important;
+    width: 100%;
+    min-width: 0;
+    height: 150px;
+    border-radius: 0 0 30px 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .figure_text {
+    margin-left: 0;
+    align-items: center;
+    padding-right: 0;
+    font-size: 1.5rem;
+  }
+  .login_container {
+    width: 100%;
+    min-width: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+/* Mobile */
+@media (max-width: 699px) {
+  .figure_container {
+    display: none !important;
+  }
+  .login_page {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .login_container {
+    width: 100vw;
+    min-width: 0;
+    height: 100vh;
+    padding: 8vw 4vw;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .login-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+  }
+  .login-heading {
+    font-size: 1rem;
+  }
+  .login-subheading {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+  .login_form {
+    gap: 1px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .login_label {
+    font-size: 0.85rem;
+  }
+  .login_input_group {
+    margin-bottom: 7px;
+  }
+  .login_input,
+  .login_input.login_username,
+  .login_input.login_password {
+    min-height: 44px !important;
+    font-size: 0.92rem !important;
+    padding: 7px 32px 7px 32px !important;
+  }
+  .login_button {
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 8px 0;
+    margin-top: 8px;
+  }
+  .forgot_password {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .login-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .login_input,
+  .login_input.login_username,
+  .login_input.login_password {
+    font-size: 0.85rem !important;
+    padding-left: 25px !important;
+  }
+  .form-warning {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    margin-top: 4px;
+  }
+}
