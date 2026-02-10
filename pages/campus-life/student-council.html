@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Council - Colegio De Amore</title>
+
+    <link rel="stylesheet" href="/assets/css/landing.css" />
+    <link rel="stylesheet" href="campus-life.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header: stacks two rows (top brand row + nav row) in normal flow -->
+    <section class="header">
+      <!-- Top brand row -->
+      <div class="header-container a1 logo-container">
+        <img src="/assets/images/logo.png" alt="Colegio de Amore logo" class="logo" />
+        <h1 class="school-name" id="school-name">Colegio De Amore</h1>
+
+        <a href="../../../admission-portal.html" class="reg-button">Join Us!</a>
+
+        <button
+          class="hamburger-button"
+          id="menu-toggle"
+          aria-label="Toggle menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          onclick="toggleSide()"
+        >
+          <img src="/assets/images/menu.png" alt="menu" class="hamburger-icon" />
+        </button>
+      </div>
+
+      <!-- Nav row: static (normal flow), full width -->
+      <div class="header-container a2 nav-container desktop-menu" id="desktop-navbar">
+        <ul class="nav-list">
+          <!-- About -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropAbout()">
+              About Us <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="about-drop">
+              <a href="../about/about-colegio-de-amore.html">About Colegio de Amore</a><br /><hr />
+              <a href="../about/mission-vision.html">Mission & Vision</a><br /><hr />
+              <a href="../about/about-us_president-message.html">President's Message</a><br /><hr />
+              <a href="../about/college-officials.html">College Officials</a><br /><hr />
+              <a href="../about/why-enroll.html">Why Enroll at Colegio de Amore</a><br /><hr />
+              <a href="../about/awards-accreditations.html">Awards and Accreditations</a><br />
+            </div>
+          </li>
+
+          <!-- Admission -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropAdmission()">
+              Admission <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="admission-drop">
+              <a href="../admission/program-offerings.html">Program Offerings</a><br /><hr />
+              <a href="../admission/admission-steps-new-students.html">Admission and Enrollment <br />Steps for New Students</a><br /><hr />
+              <a href="../admission/admission-continuing-students.html">Admissions for Enrolled/<br />Continuing Students</a><br />
+            </div>
+          </li>
+
+          <!-- News -->
+          <li>
+            <button class="navigation-button">News</button>
+          </li>
+
+          <!-- Campus Life and Services -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropServices()">
+              Campus Life & Services <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="services-drop">
+              <a href="student-activities.html">Student Activities</a><br /><hr />
+              <a href="student-council.html">Student Council</a><br /><hr />
+              <a href="clubs-organizations.html">Clubs and Organizations</a><br /><hr />
+              <a href="campus-facilities.html">Campus Facilities</a><br /><hr />
+              <a href="support-services.html">Support Services</a>
+            </div>
+          </li>
+
+          <!-- Portal -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropPortal()">
+              Portal <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="portal-drop">
+              <a href="../../../auth/student-login.php">Student Portal</a><br /><hr />
+              <a href="../../../auth/staff-login.php">Staff Portal</a><br /><hr />
+              <a href="../../../admission-portal.html">Admission Portal</a>
+            </div>
+          </li>
+        </ul>
+
+        <button class="menu-button" onclick="showSide()">
+          <img src="/assets/images/menu.png" alt="menu" class="menu" />
+        </button>
+
+        <div class="mobile-nav menubar" id="mobile-menu" style="display: none;">
+          <div class="close-container">
+            <button class="close-button" onclick="closeSide()">
+              <img src="/assets/images/close.png" alt="close" class="close" />
+            </button>
+          </div>
+          <ul class="mobile-nav-list">
+            <h1>Menu</h1>
+            <li><a href="../../../auth/student-login.php">Student Login</a></li>
+            <li><a href="../../../auth/staff-login.php">Staff Login</a></li>
+            <li><a href="../../../admission-portal.html">Admissions</a></li>
+          </ul>
+          <a href="../../../admission-portal.html" class="mobile-reg-button">Join Us!</a>
+          <a href="https://www.facebook.com" class="mobile-reg-button mobile-facebook-button" target="_blank" rel="noreferrer">Visit our Facebook Page!</a>
+          <a href="https://www.facebook.com" class="mobile-feedback-button" target="_blank" rel="noreferrer">Visit our Facebook Page</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <div class="breadcrumb">
+        <a href="../../../landing.html" class="breadcrumb-home">Home</a>
+        <span class="breadcrumb-separator">»</span>
+        <a href="#" class="breadcrumb-link">Campus Life & Services</a>
+        <span class="breadcrumb-separator">»</span>
+        <span class="breadcrumb-current">Student Council</span>
+      </div>
+    </div>
+
+    <!-- Main Content with Sidebar -->
+    <div class="main-content-wrapper">
+      <!-- Main Content Area -->
+      <div class="main-content">
+        <!-- Student Council Content Section -->
+        <section class="council-main">
+          <h1 class="page-title">Student Council</h1>
+          <p class="page-description">
+            Meet the elected student leaders who represent the student body and work to enhance the college experience at Colegio De Amore.
+          </p>
+          
+          <div class="council-content">
+            <!-- Current Officers -->
+            <div class="officers-section">
+              <h2>Current Student Council Officers</h2>
+              <div class="officers-grid">
+                <div class="officer-card president">
+                  <div class="officer-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Student Council President" class="officer-photo" />
+                  </div>
+                  <div class="officer-info">
+                    <h3 class="officer-name">Maria Santos</h3>
+                    <p class="officer-position">Student Council President</p>
+                    <p class="officer-program">BS Computer Science</p>
+                    <p class="officer-description">
+                      Leads the student council and represents student interests to the administration.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="officer-card">
+                  <div class="officer-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Vice President" class="officer-photo" />
+                  </div>
+                  <div class="officer-info">
+                    <h3 class="officer-name">Juan Dela Cruz</h3>
+                    <p class="officer-position">Vice President</p>
+                    <p class="officer-program">BS Criminology</p>
+                    <p class="officer-description">
+                      Assists the president and oversees student activities.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="officer-card">
+                  <div class="officer-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Secretary" class="officer-photo" />
+                  </div>
+                  <div class="officer-info">
+                    <h3 class="officer-name">Ana Rodriguez</h3>
+                    <p class="officer-position">Secretary</p>
+                    <p class="officer-program">BS Hospitality Management</p>
+                    <p class="officer-description">
+                      Manages council records and coordinates communication with students.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="officer-card">
+                  <div class="officer-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Treasurer" class="officer-photo" />
+                  </div>
+                  <div class="officer-info">
+                    <h3 class="officer-name">Carlos Mendoza</h3>
+                    <p class="officer-position">Treasurer</p>
+                    <p class="officer-program">BS Computer Science</p>
+                    <p class="officer-description">
+                      Manages student council finances and budget allocation.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="officer-card">
+                  <div class="officer-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Auditor" class="officer-photo" />
+                  </div>
+                  <div class="officer-info">
+                    <h3 class="officer-name">Elena Garcia</h3>
+                    <p class="officer-position">Auditor</p>
+                    <p class="officer-program">BS Criminology</p>
+                    <p class="officer-description">
+                      Ensures transparency and accountability in council operations.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="officer-card">
+                  <div class="officer-image">
+                    <img src="/assets/images/sample_image.jpg" alt="PRO" class="officer-photo" />
+                  </div>
+                  <div class="officer-info">
+                    <h3 class="officer-name">Roberto Silva</h3>
+                    <p class="officer-position">Public Relations Officer</p>
+                    <p class="officer-program">BS Hospitality Management</p>
+                    <p class="officer-description">
+                      Handles public relations and promotes council activities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Council Functions -->
+            <div class="functions-section">
+              <h2>Student Council Functions</h2>
+              <div class="functions-grid">
+                <div class="function-card">
+                  <div class="function-icon">🎯</div>
+                  <h3>Student Representation</h3>
+                  <p>Serve as the voice of the student body in academic and administrative matters.</p>
+                </div>
+
+                <div class="function-card">
+                  <div class="function-icon">📋</div>
+                  <h3>Policy Advocacy</h3>
+                  <p>Advocate for student rights and welfare through policy recommendations.</p>
+                </div>
+
+                <div class="function-card">
+                  <div class="function-icon">🎉</div>
+                  <h3>Activity Organization</h3>
+                  <p>Plan and organize student activities and programs.</p>
+                </div>
+
+                <div class="function-card">
+                  <div class="function-icon">🤝</div>
+                  <h3>Community Service</h3>
+                  <p>Lead community service initiatives and outreach programs.</p>
+                </div>
+
+                <div class="function-card">
+                  <div class="function-icon">💬</div>
+                  <h3>Communication Bridge</h3>
+                  <p>Facilitate communication between students and administration.</p>
+                </div>
+
+                <div class="function-card">
+                  <div class="function-icon">📊</div>
+                  <h3>Student Welfare</h3>
+                  <p>Address student concerns and improve campus life quality.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Election Process -->
+            <div class="election-section">
+              <h2>Election Process</h2>
+              <div class="election-timeline">
+                <div class="election-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Nomination Period</h3>
+                    <p>Students can nominate themselves or be nominated by peers for council positions.</p>
+                    <span class="step-date">February 1-15, 2025</span>
+                  </div>
+                </div>
+
+                <div class="election-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Campaign Period</h3>
+                    <p>Candidates campaign and present their platforms to the student body.</p>
+                    <span class="step-date">February 16-28, 2025</span>
+                  </div>
+                </div>
+
+                <div class="election-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Election Day</h3>
+                    <p>Students vote for their preferred candidates through online voting system.</p>
+                    <span class="step-date">March 1, 2025</span>
+                  </div>
+                </div>
+
+                <div class="election-step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Results & Inauguration</h3>
+                    <p>Election results are announced and new officers are inaugurated.</p>
+                    <span class="step-date">March 5, 2025</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- How to Get Involved -->
+            <div class="involvement-section">
+              <h2>How to Get Involved</h2>
+              <div class="involvement-options">
+                <div class="involvement-card">
+                  <h3>Run for Office</h3>
+                  <p>Consider running for a student council position during the next election.</p>
+                  <ul>
+                    <li>Meet eligibility requirements</li>
+                    <li>Submit nomination form</li>
+                    <li>Prepare campaign materials</li>
+                    <li>Present your platform</li>
+                  </ul>
+                </div>
+
+                <div class="involvement-card">
+                  <h3>Join Committees</h3>
+                  <p>Participate in various council committees and working groups.</p>
+                  <ul>
+                    <li>Academic Affairs Committee</li>
+                    <li>Student Activities Committee</li>
+                    <li>Community Service Committee</li>
+                    <li>Communications Committee</li>
+                  </ul>
+                </div>
+
+                <div class="involvement-card">
+                  <h3>Attend Meetings</h3>
+                  <p>Participate in open council meetings and voice your opinions.</p>
+                  <ul>
+                    <li>Monthly general assemblies</li>
+                    <li>Committee meetings</li>
+                    <li>Special sessions</li>
+                    <li>Public forums</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+              <h2>Contact the Student Council</h2>
+              <div class="contact-info">
+                <div class="contact-details">
+                  <h3>Student Council Office</h3>
+                  <p><strong>Location:</strong> Student Center, 2nd Floor</p>
+                  <p><strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+                  <p><strong>Email:</strong> studentcouncil@colegiodeamore.edu.ph</p>
+                  <p><strong>Phone:</strong> (046) 419-0131 ext. 205</p>
+                </div>
+                <div class="contact-details">
+                  <h3>Social Media</h3>
+                  <p>Follow us on social media for updates and announcements:</p>
+                  <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-content">
+          <h3 class="sidebar-title">Campus Life & Services</h3>
+          <hr class="sidebar-divider">
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="student-activities.html" class="sidebar-link">Student Activities</a>
+            </li>
+            <li class="sidebar-item active">
+              <a href="student-council.html" class="sidebar-link">Student Council</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="clubs-organizations.html" class="sidebar-link">Clubs and Organizations</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="campus-facilities.html" class="sidebar-link">Campus Facilities</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="support-services.html" class="sidebar-link">Support Services</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <section class="footer-section">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact Us</h3>
+          <hr />
+          <p class="footer-text">
+            <img src="/assets/images/location.png" alt="Location" class="footer-icon" />
+            <a
+              href="https://maps.google.com/?q=Colegio+de+Amore+Trece+Martires+Indang+Rd+Trece+Martires+Philippines"
+              target="_blank"
+              class="footer-link address-link"
+              >Trece Martires - Indang Rd, Trece Martires, Philippines</a
+            >
+          </p>
+          <p class="footer-text">
+            <img src="/assets/images/phone-call.png" alt="Phone" class="footer-icon" />
+            Phone:
+            <span
+              class="copyable-text phone-copy"
+              data-copy-text="Colegio de Amore Phone number: (046) 419-0131, 0977-189-7014"
+              >(046) 419-0131</span
+            >
+            <br />
+            <span
+              class="phone-break copyable-text phone-copy"
+              data-copy-text="Colegio de Amore Phone number: (046) 419-0131, 0977-189-7014"
+              >0977-189-7014</span
+            >
+          </p>
+          <p class="footer-text">
+            <img src="/assets/images/email-white.png" alt="Email" class="footer-icon" />Email:
+            <span class="copyable-text email-copy" data-copy-text="Colegio de Amore Email address: cdacgv2018@gmail.com"
+              >cdacgv2018@gmail.com</span
+            >
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <hr />
+          <ul class="footer-links">
+            <li class="footer-header">About Us</li>
+            <ul class="footer-aboutus-link" id="footer-aboutus-link" list-style-type: none>
+              <li><a href="../about/about-colegio-de-amore.html">About Colegio de Amore</a></li>
+              <li><a href="../about/mission-vision.html">Mission & Vision</a></li>
+              <li><a href="../about/about-us_president-message.html">President's Message</a></li>
+              <li><a href="../about/college-officials.html">College Officials</a></li>
+              <li><a href="../about/why-enroll.html">Why Enroll at Colegio de Amore</a></li>
+              <li><a href="../about/awards-accreditations.html">Awards and Accreditations</a></li>
+            </ul>
+
+            <li class="footer-header">Admissions</li>
+            <ul class="footer-admissions-link" id="footer-admissions-link" list-style-type: none>
+              <li><a href="../admission/program-offerings.html">Program Offerings</a></li>
+              <li><a href="../admission/admission-steps-new-students.html">Admissions and Enrollment Steps for New Students</a></li>
+              <li><a href="../admission/admission-continuing-students.html">Admissions for Enrolled/Continuing Students</a></li>
+            </ul>
+
+            <li class="footer-header">Campus Life & Services</li>
+            <ul class="footer-campuslife-link" id="footer-campuslife-link" list-style-type: none>
+              <li><a href="student-activities.html">Student Activities</a></li>
+              <li><a href="clubs-organizations.html">Clubs and Organizations</a></li>
+              <li><a href="student-council.html">Student Council</a></li>
+              <li><a href="campus-facilities.html">Campus Facilities</a></li>
+              <li><a href="support-services.html">Support Services</a></li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Follow Us</h3>
+          <hr />
+          <div class="footer-socials">
+            <a href="#"><img src="/assets/images/facebook-app-symbol.png" alt="Facebook" /></a>
+            <a href="#"><img src="/assets/images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="/assets/images/x.png" alt="X" /></a>
+            <a href="#"><img src="/assets/images/youtube.png" alt="Youtube" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Colegio de Amore. All Rights Reserved.</span>
+      </div>
+    </section>
+
+    <!-- Copy popup element -->
+    <div id="copyPopup" class="copy-popup">Copied to clipboard!</div>
+
+    <script src="/assets/js/landing.js"></script>
+    <script>
+      // Navigation dropdown functionality
+      function dropAbout() {
+        const dropdown = document.getElementById('about-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#about-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropAdmission() {
+        const dropdown = document.getElementById('admission-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#admission-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropServices() {
+        const dropdown = document.getElementById('services-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#services-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropPortal() {
+        const dropdown = document.getElementById('portal-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#portal-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      // Mobile navigation
+      function toggleSide() {
+          const sideBar = document.getElementById("mobile-menu");
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (sideBar) {
+              const isOpen = sideBar.classList.toggle("open");
+              sideBar.style.display = isOpen ? "block" : "none";
+              if (toggleBtn) {
+                  toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+              }
+              if (isOpen) {
+                  document.body.classList.add("menu-open");
+              } else {
+                  document.body.classList.remove("menu-open");
+              }
+          } else {
+              console.error("Element with ID 'mobile-menu' not found.");
+          }
+      }
+
+      function closeSide() {
+          const sideBar = document.getElementById("mobile-menu");
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (sideBar) {
+              sideBar.classList.remove("open");
+              sideBar.style.display = "none";
+              if (toggleBtn) {
+                  toggleBtn.setAttribute("aria-expanded", "false");
+              }
+              document.body.classList.remove("menu-open");
+          } else {
+              console.error("Element with ID 'mobile-menu' not found.");
+          }
+      }
+
+      function showSide() {
+          toggleSide();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+          closeSide(); // ensure closed on initial load
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+      });
+
+      
+
+      // Copy popup behavior
+      function showCopyPopup(x, y) {
+        const popup = document.getElementById('copyPopup');
+        popup.style.left = x - popup.offsetWidth / 2 + 'px';
+        popup.style.top = y - 60 + 'px';
+        popup.style.position = 'fixed';
+        popup.style.zIndex = '10000';
+        popup.classList.add('show');
+        setTimeout(() => popup.classList.remove('show'), 3000);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Copy to clipboard
+        document.querySelectorAll('.copyable-text').forEach((el) => {
+          el.addEventListener('click', function (e) {
+            const txt = this.getAttribute('data-copy-text');
+            navigator.clipboard
+              .writeText(txt)
+              .then(() => showCopyPopup(e.clientX, e.clientY))
+              .catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = txt;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showCopyPopup(e.clientX, e.clientY);
+              });
+          });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+          const dropdowns = document.querySelectorAll('.list-container');
+          const isClickInsideDropdown = event.target.closest('.list-container') || event.target.closest('.drop-button');
+          
+          if (!isClickInsideDropdown) {
+            dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

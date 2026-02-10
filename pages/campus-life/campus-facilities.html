@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Facilities - Colegio De Amore</title>
+
+    <link rel="stylesheet" href="/assets/css/landing.css" />
+    <link rel="stylesheet" href="campus-life.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header: stacks two rows (top brand row + nav row) in normal flow -->
+    <section class="header">
+      <!-- Top brand row -->
+      <div class="header-container a1 logo-container">
+        <img src="/assets/images/logo.png" alt="Colegio de Amore logo" class="logo" />
+        <h1 class="school-name" id="school-name">Colegio De Amore</h1>
+
+        <a href="../../../admission-portal.html" class="reg-button">Join Us!</a>
+
+        <button
+          class="hamburger-button"
+          id="menu-toggle"
+          aria-label="Toggle menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          onclick="toggleSide()"
+        >
+          <img src="/assets/images/menu.png" alt="menu" class="hamburger-icon" />
+        </button>
+      </div>
+
+      <!-- Nav row: static (normal flow), full width -->
+      <div class="header-container a2 nav-container desktop-menu" id="desktop-navbar">
+        <ul class="nav-list">
+          <!-- About -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropAbout()">
+              About Us <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="about-drop">
+              <a href="../about/about-colegio-de-amore.html">About Colegio de Amore</a><br /><hr />
+              <a href="../about/mission-vision.html">Mission & Vision</a><br /><hr />
+              <a href="../about/about-us_president-message.html">President's Message</a><br /><hr />
+              <a href="../about/college-officials.html">College Officials</a><br /><hr />
+              <a href="../about/why-enroll.html">Why Enroll at Colegio de Amore</a><br /><hr />
+              <a href="../about/awards-accreditations.html">Awards and Accreditations</a><br />
+            </div>
+          </li>
+
+          <!-- Admission -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropAdmission()">
+              Admission <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="admission-drop">
+              <a href="../admission/program-offerings.html">Program Offerings</a><br /><hr />
+              <a href="../admission/admission-steps-new-students.html">Admission and Enrollment <br />Steps for New Students</a><br /><hr />
+              <a href="../admission/admission-continuing-students.html">Admissions for Enrolled/<br />Continuing Students</a><br />
+            </div>
+          </li>
+
+          <!-- News -->
+          <li>
+            <button class="navigation-button">News</button>
+          </li>
+
+          <!-- Campus Life and Services -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropServices()">
+              Campus Life & Services <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="services-drop">
+              <a href="student-activities.html">Student Activities</a><br /><hr />
+              <a href="student-council.html">Student Council</a><br /><hr />
+              <a href="clubs-organizations.html">Clubs and Organizations</a><br /><hr />
+              <a href="campus-facilities.html">Campus Facilities</a><br /><hr />
+              <a href="support-services.html">Support Services</a>
+            </div>
+          </li>
+
+          <!-- Portal -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropPortal()">
+              Portal <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="portal-drop">
+              <a href="../../../auth/student-login.php">Student Portal</a><br /><hr />
+              <a href="../../../auth/staff-login.php">Staff Portal</a><br /><hr />
+              <a href="../../../admission-portal.html">Admission Portal</a>
+            </div>
+          </li>
+        </ul>
+
+        <button class="menu-button" onclick="showSide()">
+          <img src="/assets/images/menu.png" alt="menu" class="menu" />
+        </button>
+
+        <div class="mobile-nav menubar" id="mobile-menu" style="display: none;">
+          <div class="close-container">
+            <button class="close-button" onclick="closeSide()">
+              <img src="/assets/images/close.png" alt="close" class="close" />
+            </button>
+          </div>
+          <ul class="mobile-nav-list">
+            <h1>Menu</h1>
+            <li><a href="../../../auth/student-login.php">Student Login</a></li>
+            <li><a href="../../../auth/staff-login.php">Staff Login</a></li>
+            <li><a href="../../../admission-portal.html">Admissions</a></li>
+          </ul>
+          <a href="../../../admission-portal.html" class="mobile-reg-button">Join Us!</a>
+          <a href="https://www.facebook.com" class="mobile-reg-button mobile-facebook-button" target="_blank" rel="noreferrer">Visit our Facebook Page!</a>
+          <a href="https://www.facebook.com" class="mobile-feedback-button" target="_blank" rel="noreferrer">Visit our Facebook Page</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <div class="breadcrumb">
+        <a href="../../../landing.html" class="breadcrumb-home">Home</a>
+        <span class="breadcrumb-separator">»</span>
+        <a href="#" class="breadcrumb-link">Campus Life & Services</a>
+        <span class="breadcrumb-separator">»</span>
+        <span class="breadcrumb-current">Campus Facilities</span>
+      </div>
+    </div>
+
+    <!-- Main Content with Sidebar -->
+    <div class="main-content-wrapper">
+      <!-- Main Content Area -->
+      <div class="main-content">
+        <!-- Campus Facilities Content Section -->
+        <section class="facilities-main">
+          <h1 class="page-title">Campus Facilities</h1>
+          <p class="page-description">
+            Discover our modern and well-equipped facilities designed to support your academic journey and enhance your learning experience.
+          </p>
+          
+          <div class="facilities-content">
+            <!-- Academic Facilities -->
+            <div class="facilities-section">
+              <h2>Academic Facilities</h2>
+              <div class="facilities-grid">
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Computer Laboratory" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Computer Laboratories</h3>
+                    <p class="facility-description">
+                      State-of-the-art computer labs equipped with the latest hardware and software for programming, research, and digital learning.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>High-speed internet connection</li>
+                        <li>Latest software applications</li>
+                        <li>Air-conditioned environment</li>
+                        <li>Projector and audio systems</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 7:00 AM - 8:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Library" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Library and Learning Center</h3>
+                    <p class="facility-description">
+                      Comprehensive library with extensive collection of books, journals, and digital resources to support academic research.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Extensive book collection</li>
+                        <li>Digital resources and databases</li>
+                        <li>Quiet study areas</li>
+                        <li>Computer workstations</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Saturday, 8:00 AM - 9:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Science Laboratory" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Science Laboratories</h3>
+                    <p class="facility-description">
+                      Well-equipped science labs for chemistry, biology, and physics experiments with modern equipment and safety features.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Modern laboratory equipment</li>
+                        <li>Safety protocols and equipment</li>
+                        <li>Ventilation systems</li>
+                        <li>Storage for chemicals and specimens</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Classroom" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Smart Classrooms</h3>
+                    <p class="facility-description">
+                      Modern classrooms equipped with smart boards, projectors, and audio-visual systems for interactive learning.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Interactive smart boards</li>
+                        <li>HD projectors</li>
+                        <li>Audio-visual systems</li>
+                        <li>Comfortable seating</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 7:00 AM - 8:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sports and Recreation -->
+            <div class="facilities-section">
+              <h2>Sports and Recreation</h2>
+              <div class="facilities-grid">
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Gymnasium" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Gymnasium</h3>
+                    <p class="facility-description">
+                      Multi-purpose gymnasium for basketball, volleyball, and other indoor sports activities.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Basketball court</li>
+                        <li>Volleyball court</li>
+                        <li>Sound system</li>
+                        <li>Seating for spectators</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 6:00 AM - 8:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Outdoor Sports Area" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Outdoor Sports Area</h3>
+                    <p class="facility-description">
+                      Open-air sports facilities including football field, running track, and outdoor courts for various sports.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Football field</li>
+                        <li>Running track</li>
+                        <li>Outdoor basketball court</li>
+                        <li>Table tennis area</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Daily, 6:00 AM - 8:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Student Services -->
+            <div class="facilities-section">
+              <h2>Student Services</h2>
+              <div class="facilities-grid">
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Cafeteria" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Cafeteria</h3>
+                    <p class="facility-description">
+                      Clean and spacious cafeteria offering a variety of meals, snacks, and beverages at affordable prices.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Variety of food options</li>
+                        <li>Clean dining area</li>
+                        <li>Affordable prices</li>
+                        <li>Student-friendly menu</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 7:00 AM - 6:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Student Center" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Student Center</h3>
+                    <p class="facility-description">
+                      Central hub for student activities, meetings, and social gatherings with comfortable seating and meeting rooms.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Meeting rooms</li>
+                        <li>Lounge areas</li>
+                        <li>Student organization offices</li>
+                        <li>Activity space</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 8:00 AM - 8:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Health Center" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Health Center</h3>
+                    <p class="facility-description">
+                      On-campus health center providing basic medical services, first aid, and health consultations for students.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Basic medical services</li>
+                        <li>First aid supplies</li>
+                        <li>Health consultations</li>
+                        <li>Emergency response</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Parking Area" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Parking Area</h3>
+                    <p class="facility-description">
+                      Secure parking facilities for students, faculty, and visitors with designated areas for motorcycles and cars.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Secure parking spaces</li>
+                        <li>Motorcycle parking</li>
+                        <li>Visitor parking</li>
+                        <li>Security monitoring</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Daily, 6:00 AM - 8:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Specialized Facilities -->
+            <div class="facilities-section">
+              <h2>Specialized Facilities</h2>
+              <div class="facilities-grid">
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Criminology Laboratory" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Criminology Laboratory</h3>
+                    <p class="facility-description">
+                      Specialized laboratory for criminology students with forensic equipment and crime scene investigation tools.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Forensic equipment</li>
+                        <li>Crime scene simulation</li>
+                        <li>Evidence collection tools</li>
+                        <li>Analysis workstations</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM
+                    </div>
+                  </div>
+                </div>
+
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="/assets/images/sample_image.jpg" alt="Hospitality Training Center" class="facility-photo" />
+                  </div>
+                  <div class="facility-info">
+                    <h3 class="facility-name">Hospitality Training Center</h3>
+                    <p class="facility-description">
+                      Professional training facility for hospitality management students with commercial-grade kitchen and service areas.
+                    </p>
+                    <div class="facility-features">
+                      <h4>Features:</h4>
+                      <ul>
+                        <li>Commercial kitchen</li>
+                        <li>Service training area</li>
+                        <li>Restaurant simulation</li>
+                        <li>Professional equipment</li>
+                      </ul>
+                    </div>
+                    <div class="facility-hours">
+                      <strong>Operating Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Facility Guidelines -->
+            <div class="guidelines-section">
+              <h2>Facility Usage Guidelines</h2>
+              <div class="guidelines-content">
+                <div class="guideline-category">
+                  <h3>General Rules</h3>
+                  <ul>
+                    <li>Present valid student ID when using facilities</li>
+                    <li>Follow posted operating hours</li>
+                    <li>Maintain cleanliness and order</li>
+                    <li>Report any damages or issues immediately</li>
+                    <li>Respect other users and staff</li>
+                  </ul>
+                </div>
+                <div class="guideline-category">
+                  <h3>Reservation Policy</h3>
+                  <ul>
+                    <li>Advance booking required for special activities</li>
+                    <li>Submit reservation requests at least 48 hours in advance</li>
+                    <li>Provide detailed activity information</li>
+                    <li>Follow facility-specific guidelines</li>
+                    <li>Clean up after use</li>
+                  </ul>
+                </div>
+                <div class="guideline-category">
+                  <h3>Safety Requirements</h3>
+                  <ul>
+                    <li>Follow all safety protocols</li>
+                    <li>Use protective equipment when required</li>
+                    <li>Report safety hazards immediately</li>
+                    <li>Participate in safety orientations</li>
+                    <li>Follow emergency procedures</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-section">
+              <h2>Facility Reservations and Inquiries</h2>
+              <div class="contact-info">
+                <div class="contact-details">
+                  <h3>Facility Management Office</h3>
+                  <p><strong>Location:</strong> Administration Building, Ground Floor</p>
+                  <p><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+                  <p><strong>Email:</strong> facilities@colegiodeamore.edu.ph</p>
+                  <p><strong>Phone:</strong> (046) 419-0131 ext. 204</p>
+                </div>
+                <div class="contact-details">
+                  <h3>Emergency Contact</h3>
+                  <p>For after-hours emergencies or urgent facility issues:</p>
+                  <p><strong>Security Office:</strong> (046) 419-0131 ext. 100</p>
+                  <p><strong>Emergency Hotline:</strong> 0917-123-4567</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-content">
+          <h3 class="sidebar-title">Campus Life & Services</h3>
+          <hr class="sidebar-divider">
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="student-activities.html" class="sidebar-link">Student Activities</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="student-council.html" class="sidebar-link">Student Council</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="clubs-organizations.html" class="sidebar-link">Clubs and Organizations</a>
+            </li>
+            <li class="sidebar-item active">
+              <a href="campus-facilities.html" class="sidebar-link">Campus Facilities</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="support-services.html" class="sidebar-link">Support Services</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <section class="footer-section">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact Us</h3>
+          <hr />
+          <p class="footer-text">
+            <img src="/assets/images/location.png" alt="Location" class="footer-icon" />
+            <a
+              href="https://maps.google.com/?q=Colegio+de+Amore+Trece+Martires+Indang+Rd+Trece+Martires+Philippines"
+              target="_blank"
+              class="footer-link address-link"
+              >Trece Martires - Indang Rd, Trece Martires, Philippines</a
+            >
+          </p>
+          <p class="footer-text">
+            <img src="/assets/images/phone-call.png" alt="Phone" class="footer-icon" />
+            Phone:
+            <span
+              class="copyable-text phone-copy"
+              data-copy-text="Colegio de Amore Phone number: (046) 419-0131, 0977-189-7014"
+              >(046) 419-0131</span
+            >
+            <br />
+            <span
+              class="phone-break copyable-text phone-copy"
+              data-copy-text="Colegio de Amore Phone number: (046) 419-0131, 0977-189-7014"
+              >0977-189-7014</span
+            >
+          </p>
+          <p class="footer-text">
+            <img src="/assets/images/email-white.png" alt="Email" class="footer-icon" />Email:
+            <span class="copyable-text email-copy" data-copy-text="Colegio de Amore Email address: cdacgv2018@gmail.com"
+              >cdacgv2018@gmail.com</span
+            >
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <hr />
+          <ul class="footer-links">
+            <li class="footer-header">About Us</li>
+            <ul class="footer-aboutus-link" id="footer-aboutus-link" list-style-type: none>
+              <li><a href="../about/about-colegio-de-amore.html">About Colegio de Amore</a></li>
+              <li><a href="../about/mission-vision.html">Mission & Vision</a></li>
+              <li><a href="../about/about-us_president-message.html">President's Message</a></li>
+              <li><a href="../about/college-officials.html">College Officials</a></li>
+              <li><a href="../about/why-enroll.html">Why Enroll at Colegio de Amore</a></li>
+              <li><a href="../about/awards-accreditations.html">Awards and Accreditations</a></li>
+            </ul>
+
+            <li class="footer-header">Admissions</li>
+            <ul class="footer-admissions-link" id="footer-admissions-link" list-style-type: none>
+              <li><a href="../admission/program-offerings.html">Program Offerings</a></li>
+              <li><a href="../admission/admission-steps-new-students.html">Admissions and Enrollment Steps for New Students</a></li>
+              <li><a href="../admission/admission-continuing-students.html">Admissions for Enrolled/Continuing Students</a></li>
+            </ul>
+
+            <li class="footer-header">Campus Life & Services</li>
+            <ul class="footer-campuslife-link" id="footer-campuslife-link" list-style-type: none>
+              <li><a href="student-activities.html">Student Activities</a></li>
+              <li><a href="clubs-organizations.html">Clubs and Organizations</a></li>
+              <li><a href="student-council.html">Student Council</a></li>
+              <li><a href="campus-facilities.html">Campus Facilities</a></li>
+              <li><a href="support-services.html">Support Services</a></li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Follow Us</h3>
+          <hr />
+          <div class="footer-socials">
+            <a href="#"><img src="/assets/images/facebook-app-symbol.png" alt="Facebook" /></a>
+            <a href="#"><img src="/assets/images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="/assets/images/x.png" alt="X" /></a>
+            <a href="#"><img src="/assets/images/youtube.png" alt="Youtube" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Colegio de Amore. All Rights Reserved.</span>
+      </div>
+    </section>
+
+    <!-- Copy popup element -->
+    <div id="copyPopup" class="copy-popup">Copied to clipboard!</div>
+
+    <script src="/assets/js/landing.js"></script>
+    <script>
+      // Navigation dropdown functionality
+      function dropAbout() {
+        const dropdown = document.getElementById('about-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#about-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropAdmission() {
+        const dropdown = document.getElementById('admission-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#admission-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropServices() {
+        const dropdown = document.getElementById('services-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#services-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropPortal() {
+        const dropdown = document.getElementById('portal-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#portal-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      // Mobile navigation
+      function toggleSide() {
+          const sideBar = document.getElementById("mobile-menu");
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (sideBar) {
+              const isOpen = sideBar.classList.toggle("open");
+              sideBar.style.display = isOpen ? "block" : "none";
+              if (toggleBtn) {
+                  toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+              }
+              if (isOpen) {
+                  document.body.classList.add("menu-open");
+              } else {
+                  document.body.classList.remove("menu-open");
+              }
+          } else {
+              console.error("Element with ID 'mobile-menu' not found.");
+          }
+      }
+
+      function closeSide() {
+          const sideBar = document.getElementById("mobile-menu");
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (sideBar) {
+              sideBar.classList.remove("open");
+              sideBar.style.display = "none";
+              if (toggleBtn) {
+                  toggleBtn.setAttribute("aria-expanded", "false");
+              }
+              document.body.classList.remove("menu-open");
+          } else {
+              console.error("Element with ID 'mobile-menu' not found.");
+          }
+      }
+
+      function showSide() {
+          toggleSide();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+          closeSide(); // ensure closed on initial load
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+      });
+
+      
+
+      // Copy popup behavior
+      function showCopyPopup(x, y) {
+        const popup = document.getElementById('copyPopup');
+        popup.style.left = x - popup.offsetWidth / 2 + 'px';
+        popup.style.top = y - 60 + 'px';
+        popup.style.position = 'fixed';
+        popup.style.zIndex = '10000';
+        popup.classList.add('show');
+        setTimeout(() => popup.classList.remove('show'), 3000);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Copy to clipboard
+        document.querySelectorAll('.copyable-text').forEach((el) => {
+          el.addEventListener('click', function (e) {
+            const txt = this.getAttribute('data-copy-text');
+            navigator.clipboard
+              .writeText(txt)
+              .then(() => showCopyPopup(e.clientX, e.clientY))
+              .catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = txt;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showCopyPopup(e.clientX, e.clientY);
+              });
+          });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+          const dropdowns = document.querySelectorAll('.list-container');
+          const isClickInsideDropdown = event.target.closest('.list-container') || event.target.closest('.drop-button');
+          
+          if (!isClickInsideDropdown) {
+            dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

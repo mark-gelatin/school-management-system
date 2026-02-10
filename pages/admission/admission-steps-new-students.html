@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Steps for New Students - Colegio De Amore</title>
+
+    <link rel="stylesheet" href="/assets/css/landing.css" />
+    <link rel="stylesheet" href="admission.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header: stacks two rows (top brand row + nav row) in normal flow -->
+    <section class="header">
+      <!-- Top brand row -->
+      <div class="header-container a1 logo-container">
+        <img src="/assets/images/logo.png" alt="Colegio de Amore logo" class="logo" />
+        <h1 class="school-name" id="school-name">Colegio De Amore</h1>
+
+        <a href="../../../admission-portal.html" class="reg-button">Join Us!</a>
+
+        <button
+          class="hamburger-button"
+          id="menu-toggle"
+          aria-label="Toggle menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          onclick="toggleSide()"
+        >
+          <img src="/assets/images/menu.png" alt="menu" class="hamburger-icon" />
+        </button>
+      </div>
+
+      <!-- Nav row: static (normal flow), full width -->
+      <div class="header-container a2 nav-container desktop-menu" id="desktop-navbar">
+        <ul class="nav-list">
+          <!-- About -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropAbout()">
+              About Us <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="about-drop">
+              <a href="../about/about-colegio-de-amore.html">About Colegio de Amore</a><br /><hr />
+              <a href="../about/mission-vision.html">Mission & Vision</a><br /><hr />
+              <a href="../about/about-us_president-message.html">President's Message</a><br /><hr />
+              <a href="../about/college-officials.html">College Officials</a><br /><hr />
+              <a href="../about/why-enroll.html">Why Enroll at Colegio de Amore</a><br /><hr />
+              <a href="../about/awards-accreditations.html">Awards and Accreditations</a><br />
+            </div>
+          </li>
+
+          <!-- Admission -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropAdmission()">
+              Admission <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="admission-drop">
+              <a href="program-offerings.html">Program Offerings</a><br /><hr />
+              <a href="admission-steps-new-students.html">Admission and Enrollment <br />Steps for New Students</a><br /><hr />
+              <a href="admission-continuing-students.html">Admissions for Enrolled/<br />Continuing Students</a><br />
+            </div>
+          </li>
+
+          <!-- News -->
+          <li>
+            <button class="navigation-button">News</button>
+          </li>
+
+          <!-- Campus Life and Services -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropServices()">
+              Campus Life & Services <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="services-drop">
+              <a href="../campus-life/student-activities.html">Student Activities</a><br /><hr />
+              <a href="../campus-life/student-council.html">Student Council</a><br /><hr />
+              <a href="../campus-life/clubs-organizations.html">Clubs and Organizations</a><br /><hr />
+              <a href="../campus-life/campus-facilities.html">Campus Facilities</a><br /><hr />
+              <a href="../campus-life/support-services.html">Support Services</a>
+            </div>
+          </li>
+
+          <!-- Portal -->
+          <li>
+            <button class="navigation-button drop-button" onclick="dropPortal()">
+              Portal <img src="/assets/images/down-arrow.png" class="down_arrow" alt="downarrow" />
+            </button>
+            <div class="list-container" id="portal-drop">
+              <a href="../../../auth/student-login.php">Student Portal</a><br /><hr />
+              <a href="../../../auth/staff-login.php">Staff Portal</a><br /><hr />
+              <a href="../../../admission-portal.html">Admission Portal</a>
+            </div>
+          </li>
+        </ul>
+
+        <button class="menu-button" onclick="showSide()">
+          <img src="/assets/images/menu.png" alt="menu" class="menu" />
+        </button>
+
+        <div class="mobile-nav menubar" id="mobile-menu" style="display: none;">
+          <div class="close-container">
+            <button class="close-button" onclick="closeSide()">
+              <img src="/assets/images/close.png" alt="close" class="close" />
+            </button>
+          </div>
+          <ul class="mobile-nav-list">
+            <h1>Menu</h1>
+            <li><a href="../../../auth/student-login.php">Student Login</a></li>
+            <li><a href="../../../auth/staff-login.php">Staff Login</a></li>
+            <li><a href="../../../admission-portal.html">Admissions</a></li>
+          </ul>
+          <a href="../../../admission-portal.html" class="mobile-reg-button">Join Us!</a>
+          <a href="https://www.facebook.com" class="mobile-reg-button mobile-facebook-button" target="_blank" rel="noreferrer">Visit our Facebook Page!</a>
+          <a href="https://www.facebook.com" class="mobile-feedback-button" target="_blank" rel="noreferrer">Visit our Facebook Page</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <div class="breadcrumb">
+        <a href="../../../landing.html" class="breadcrumb-home">Home</a>
+        <span class="breadcrumb-separator">»</span>
+        <a href="#" class="breadcrumb-link">Admission</a>
+        <span class="breadcrumb-separator">»</span>
+        <span class="breadcrumb-current">Admission Steps for New Students</span>
+      </div>
+    </div>
+
+    <!-- Main Content with Sidebar -->
+    <div class="main-content-wrapper">
+      <!-- Main Content Area -->
+      <div class="main-content">
+        <!-- Admission Steps Content Section -->
+        <section class="admission-steps-main">
+          <h1 class="page-title">Admission Steps for New Students</h1>
+          <p class="page-description">
+            Follow these step-by-step instructions to complete your admission process and begin your educational journey at Colegio De Amore.
+          </p>
+          
+          <div class="admission-steps-content">
+            <!-- Step-by-Step Process -->
+            <div class="steps-section">
+              <h2>Admission Process</h2>
+              <div class="steps-timeline">
+                <div class="timeline-step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Submit Application Form</h3>
+                    <p>Complete the online application form or obtain a physical copy from the admissions office. Ensure all information is accurate and complete.</p>
+                    <div class="step-details">
+                      <h4>Required Information:</h4>
+                      <ul>
+                        <li>Personal Information</li>
+                        <li>Educational Background</li>
+                        <li>Program of Choice</li>
+                        <li>Contact Details</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Submit Required Documents</h3>
+                    <p>Gather and submit all required documents to the admissions office. Documents must be original or certified true copies.</p>
+                    <div class="step-details">
+                      <h4>Required Documents:</h4>
+                      <ul>
+                        <li>High School Diploma or Equivalent</li>
+                        <li>Official Transcript of Records</li>
+                        <li>Birth Certificate (PSA)</li>
+                        <li>2x2 ID Photos (4 copies)</li>
+                        <li>Medical Certificate</li>
+                        <li>Certificate of Good Moral Character</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Pay Application Fee</h3>
+                    <p>Pay the non-refundable application fee at the cashier's office or through designated payment channels.</p>
+                    <div class="step-details">
+                      <h4>Payment Options:</h4>
+                      <ul>
+                        <li>Cash payment at cashier's office</li>
+                        <li>Bank deposit/transfer</li>
+                        <li>Online payment (if available)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Take Entrance Examination</h3>
+                    <p>Schedule and take the entrance examination. The exam covers general knowledge, English, Mathematics, and logical reasoning.</p>
+                    <div class="step-details">
+                      <h4>Exam Coverage:</h4>
+                      <ul>
+                        <li>General Knowledge</li>
+                        <li>English Proficiency</li>
+                        <li>Mathematics</li>
+                        <li>Logical Reasoning</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <div class="step-number">5</div>
+                  <div class="step-content">
+                    <h3>Interview</h3>
+                    <p>Participate in an interview with the admissions committee. This is an opportunity to discuss your goals and demonstrate your commitment to education.</p>
+                    <div class="step-details">
+                      <h4>Interview Topics:</h4>
+                      <ul>
+                        <li>Educational Goals</li>
+                        <li>Career Aspirations</li>
+                        <li>Why Choose Colegio De Amore</li>
+                        <li>Personal Motivation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <div class="step-number">6</div>
+                  <div class="step-content">
+                    <h3>Receive Admission Decision</h3>
+                    <p>Wait for the admission decision. Results will be communicated through your preferred contact method within 5-7 business days.</p>
+                    <div class="step-details">
+                      <h4>Decision Notification:</h4>
+                      <ul>
+                        <li>Email notification</li>
+                        <li>Phone call</li>
+                        <li>Official letter</li>
+                        <li>Online portal update</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-step">
+                  <div class="step-number">7</div>
+                  <div class="step-content">
+                    <h3>Complete Enrollment</h3>
+                    <p>If accepted, complete the enrollment process by submitting additional requirements and paying the necessary fees.</p>
+                    <div class="step-details">
+                      <h4>Enrollment Requirements:</h4>
+                      <ul>
+                        <li>Acceptance letter</li>
+                        <li>Enrollment form</li>
+                        <li>Tuition fee payment</li>
+                        <li>Student ID application</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Important Dates -->
+            <div class="important-dates">
+              <h2>Important Dates</h2>
+              <div class="dates-grid">
+                <div class="date-item">
+                  <h3>Application Period</h3>
+                  <p class="date-range">January 1 - March 31, 2025</p>
+                  <p>Submit your application and required documents during this period.</p>
+                </div>
+                <div class="date-item">
+                  <h3>Entrance Examination</h3>
+                  <p class="date-range">February 1 - April 15, 2025</p>
+                  <p>Schedule and take your entrance examination.</p>
+                </div>
+                <div class="date-item">
+                  <h3>Interview Period</h3>
+                  <p class="date-range">March 1 - April 30, 2025</p>
+                  <p>Complete your interview with the admissions committee.</p>
+                </div>
+                <div class="date-item">
+                  <h3>Enrollment Period</h3>
+                  <p class="date-range">May 1 - June 30, 2025</p>
+                  <p>Complete enrollment for accepted students.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+              <h2>Need Help?</h2>
+              <p>If you have any questions about the admission process, please don't hesitate to contact our admissions office.</p>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <h3>Admissions Office</h3>
+                  <p><strong>Phone:</strong> (046) 419-0131</p>
+                  <p><strong>Email:</strong> admissions@colegiodeamore.edu.ph</p>
+                  <p><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="contact-item">
+                  <h3>Online Application</h3>
+                  <p>You can also start your application online through our admission portal.</p>
+                  <a href="../../../admission-portal.html" class="cta-button">Apply Online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-content">
+          <h3 class="sidebar-title">Admission</h3>
+          <hr class="sidebar-divider">
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a href="program-offerings.html" class="sidebar-link">Program Offerings</a>
+            </li>
+            <li class="sidebar-item active">
+              <a href="admission-steps-new-students.html" class="sidebar-link">Admission Steps for New Students</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="admission-continuing-students.html" class="sidebar-link">Admissions for Continuing Students</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <section class="footer-section">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3 class="footer-heading">Contact Us</h3>
+          <hr />
+          <p class="footer-text">
+            <img src="/assets/images/location.png" alt="Location" class="footer-icon" />
+            <a
+              href="https://maps.google.com/?q=Colegio+de+Amore+Trece+Martires+Indang+Rd+Trece+Martires+Philippines"
+              target="_blank"
+              class="footer-link address-link"
+              >Trece Martires - Indang Rd, Trece Martires, Philippines</a
+            >
+          </p>
+          <p class="footer-text">
+            <img src="/assets/images/phone-call.png" alt="Phone" class="footer-icon" />
+            Phone:
+            <span
+              class="copyable-text phone-copy"
+              data-copy-text="Colegio de Amore Phone number: (046) 419-0131, 0977-189-7014"
+              >(046) 419-0131</span
+            >
+            <br />
+            <span
+              class="phone-break copyable-text phone-copy"
+              data-copy-text="Colegio de Amore Phone number: (046) 419-0131, 0977-189-7014"
+              >0977-189-7014</span
+            >
+          </p>
+          <p class="footer-text">
+            <img src="/assets/images/email-white.png" alt="Email" class="footer-icon" />Email:
+            <span class="copyable-text email-copy" data-copy-text="Colegio de Amore Email address: cdacgv2018@gmail.com"
+              >cdacgv2018@gmail.com</span
+            >
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <hr />
+          <ul class="footer-links">
+            <li class="footer-header">About Us</li>
+            <ul class="footer-aboutus-link" id="footer-aboutus-link" list-style-type: none>
+              <li><a href="../about/about-colegio-de-amore.html">About Colegio de Amore</a></li>
+              <li><a href="../about/mission-vision.html">Mission & Vision</a></li>
+              <li><a href="../about/about-us_president-message.html">President's Message</a></li>
+              <li><a href="../about/college-officials.html">College Officials</a></li>
+              <li><a href="../about/why-enroll.html">Why Enroll at Colegio de Amore</a></li>
+              <li><a href="../about/awards-accreditations.html">Awards and Accreditations</a></li>
+            </ul>
+
+            <li class="footer-header">Admissions</li>
+            <ul class="footer-admissions-link" id="footer-admissions-link" list-style-type: none>
+              <li><a href="program-offerings.html">Program Offerings</a></li>
+              <li><a href="admission-steps-new-students.html">Admissions and Enrollment Steps for New Students</a></li>
+              <li><a href="admission-continuing-students.html">Admissions for Enrolled/Continuing Students</a></li>
+            </ul>
+
+            <li class="footer-header">Campus Life & Services</li>
+            <ul class="footer-campuslife-link" id="footer-campuslife-link" list-style-type: none>
+              <li><a href="../campus-life/student-activities.html">Student Activities</a></li>
+              <li><a href="../campus-life/clubs-organizations.html">Clubs and Organizations</a></li>
+              <li><a href="../campus-life/student-council.html">Student Council</a></li>
+              <li><a href="../campus-life/campus-facilities.html">Campus Facilities</a></li>
+              <li><a href="../campus-life/support-services.html">Support Services</a></li>
+            </ul>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Follow Us</h3>
+          <hr />
+          <div class="footer-socials">
+            <a href="#"><img src="/assets/images/facebook-app-symbol.png" alt="Facebook" /></a>
+            <a href="#"><img src="/assets/images/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="/assets/images/x.png" alt="X" /></a>
+            <a href="#"><img src="/assets/images/youtube.png" alt="Youtube" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Colegio de Amore. All Rights Reserved.</span>
+      </div>
+    </section>
+
+    <!-- Copy popup element -->
+    <div id="copyPopup" class="copy-popup">Copied to clipboard!</div>
+
+    <script src="/assets/js/landing.js"></script>
+    <script>
+      // Navigation dropdown functionality
+      function dropAbout() {
+        const dropdown = document.getElementById('about-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#about-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropAdmission() {
+        const dropdown = document.getElementById('admission-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#admission-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropServices() {
+        const dropdown = document.getElementById('services-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#services-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      function dropPortal() {
+        const dropdown = document.getElementById('portal-drop');
+        const otherDropdowns = document.querySelectorAll('.list-container:not(#portal-drop)');
+        
+        otherDropdowns.forEach(drop => drop.classList.remove('show'));
+        dropdown.classList.toggle('show');
+      }
+
+      // Mobile navigation
+      function toggleSide() {
+          const sideBar = document.getElementById("mobile-menu");
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (sideBar) {
+              const isOpen = sideBar.classList.toggle("open");
+              sideBar.style.display = isOpen ? "block" : "none";
+              if (toggleBtn) {
+                  toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+              }
+              if (isOpen) {
+                  document.body.classList.add("menu-open");
+              } else {
+                  document.body.classList.remove("menu-open");
+              }
+          } else {
+              console.error("Element with ID 'mobile-menu' not found.");
+          }
+      }
+
+      function closeSide() {
+          const sideBar = document.getElementById("mobile-menu");
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (sideBar) {
+              sideBar.classList.remove("open");
+              sideBar.style.display = "none";
+              if (toggleBtn) {
+                  toggleBtn.setAttribute("aria-expanded", "false");
+              }
+              document.body.classList.remove("menu-open");
+          } else {
+              console.error("Element with ID 'mobile-menu' not found.");
+          }
+      }
+
+      function showSide() {
+          toggleSide();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+          closeSide(); // ensure closed on initial load
+          const toggleBtn = document.getElementById("menu-toggle");
+          if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+      });
+
+      
+
+      // Copy popup behavior
+      function showCopyPopup(x, y) {
+        const popup = document.getElementById('copyPopup');
+        popup.style.left = x - popup.offsetWidth / 2 + 'px';
+        popup.style.top = y - 60 + 'px';
+        popup.style.position = 'fixed';
+        popup.style.zIndex = '10000';
+        popup.classList.add('show');
+        setTimeout(() => popup.classList.remove('show'), 3000);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Copy to clipboard
+        document.querySelectorAll('.copyable-text').forEach((el) => {
+          el.addEventListener('click', function (e) {
+            const txt = this.getAttribute('data-copy-text');
+            navigator.clipboard
+              .writeText(txt)
+              .then(() => showCopyPopup(e.clientX, e.clientY))
+              .catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = txt;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showCopyPopup(e.clientX, e.clientY);
+              });
+          });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+          const dropdowns = document.querySelectorAll('.list-container');
+          const isClickInsideDropdown = event.target.closest('.list-container') || event.target.closest('.drop-button');
+          
+          if (!isClickInsideDropdown) {
+            dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
