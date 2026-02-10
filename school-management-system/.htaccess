@@ -1,0 +1,27 @@
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /school-management-system/
+
+    # Block direct access to sensitive internals.
+    RewriteRule ^(config|database|includes)/ - [F,L,NC]
+
+    # Route non-existing resources to index.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Restrict SQL and log file downloads if copied accidentally.
+<FilesMatch "\.(sql|log|env)$">
+    Require all denied
+</FilesMatch>
