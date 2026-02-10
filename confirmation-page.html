@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation of Details - Colegio de Amore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/student-registration.css">
+</head>
+<body class="data-privacy-page">
+    <div class="admission-header">
+        <a href="landing.html" class="admission-home-icon">
+            <img src="assets/images/home_white.png" alt="Home Icon">
+        </a>
+        <div class="admission-header-text">Admission Application</div>
+        <div class="admission-logo"><img src="assets/images/logo.png" alt="Colegio de Amore Logo"></div>
+    </div>
+    
+    <div class="data-privacy-container">
+        <div class="data-privacy-header">
+            <h2 class="privacy-subtitle"><img src="assets/images/approved.png" alt="" class="privacy-icon"> Confirmation of Details</h2>
+            <p class="privacy-act-label">Please review all information before submitting</p>
+        </div>
+        
+        <div class="data-privacy-content">
+            <div class="privacy-intro">
+                <p>Please carefully review all the information you have provided below. Ensure that all details are accurate and complete before submitting your application.</p>
+            </div>
+            
+            <!-- Personal Information Section -->
+            <div class="privacy-section">
+                <h2>Personal Information</h2>
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Full Name:</span>
+                        <span class="detail-value" id="confirmFullName"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Date of Birth:</span>
+                        <span class="detail-value" id="confirmDOB"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Gender:</span>
+                        <span class="detail-value" id="confirmGender"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Nationality:</span>
+                        <span class="detail-value" id="confirmNationality"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Phone Number:</span>
+                        <span class="detail-value" id="confirmPhone"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Academic Information Section -->
+            <div class="privacy-section">
+                <h2>Academic Information</h2>
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Program:</span>
+                        <span class="detail-value" id="confirmProgram"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Educational Status:</span>
+                        <span class="detail-value" id="confirmEducationalStatus"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Address Information Section -->
+            <div class="privacy-section">
+                <h2>Address Information</h2>
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Country:</span>
+                        <span class="detail-value" id="confirmCountry"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">City/Province:</span>
+                        <span class="detail-value" id="confirmCityProvince"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Municipality:</span>
+                        <span class="detail-value" id="confirmMunicipality"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Barangay:</span>
+                        <span class="detail-value" id="confirmBaranggay"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Address:</span>
+                        <span class="detail-value" id="confirmAddress"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Postal Code:</span>
+                        <span class="detail-value" id="confirmPostalCode"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Family Information Section -->
+            <div class="privacy-section">
+                <h2>Family Information</h2>
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Mother's Name:</span>
+                        <span class="detail-value" id="confirmMotherName"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Mother's Phone:</span>
+                        <span class="detail-value" id="confirmMotherPhone"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Mother's Occupation:</span>
+                        <span class="detail-value" id="confirmMotherOccupation"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Father's Name:</span>
+                        <span class="detail-value" id="confirmFatherName"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Father's Phone:</span>
+                        <span class="detail-value" id="confirmFatherPhone"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Father's Occupation:</span>
+                        <span class="detail-value" id="confirmFatherOccupation"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emergency Contact Section -->
+            <div class="privacy-section">
+                <h2>Emergency Contact</h2>
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Emergency Contact Name:</span>
+                        <span class="detail-value" id="confirmEmergencyName"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Emergency Contact Phone:</span>
+                        <span class="detail-value" id="confirmEmergencyPhone"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Emergency Contact Address:</span>
+                        <span class="detail-value" id="confirmEmergencyAddress"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Account Information Section -->
+            <div class="privacy-section">
+                <h2>Account Information</h2>
+                <div class="confirmation-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Email Address:</span>
+                        <span class="detail-value" id="confirmEmail"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Password:</span>
+                        <span class="detail-value">••••••••</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Warning Section -->
+            <div class="privacy-highlight">
+                <p><strong>Important Warning:</strong> Providing false or inaccurate information may result in consequences or disqualification from the admission process. Please ensure all information above is correct and truthful.</p>
+            </div>
+        </div>
+        
+        <div class="data-privacy-actions">
+            <div class="privacy-checkbox-container">
+                <input type="checkbox" id="confirmDetailsCheckbox" required>
+                <label for="confirmDetailsCheckbox">I have reviewed all the information above and confirm that all details are accurate and truthful.</label>
+            </div>
+            
+            <button id="submitFinalBtn" class="btn btn-success" disabled>Submit Application</button>
+            <a href="student-registration-portal.php" class="btn btn-outline">Back to Edit</a>
+        </div>
+    </div>
+    
+    <script src="assets/js/confirmation-page.js"></script>
+</body>
+</html>

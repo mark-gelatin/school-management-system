@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Application Submitted - Colegio de Amore</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+	<link rel="stylesheet" href="/assets/css/student-registration.css">
+</head>
+<body class="data-privacy-page">
+	<div class="admission-header">
+		<a href="landing.html" class="admission-home-icon">
+			<img src="/assets/images/home_white.png" alt="Home Icon">
+		</a>
+		<div class="admission-header-text">Admission Application</div>
+		<div class="admission-logo"><img src="/assets/images/logo.png" alt="Colegio de Amore Logo"></div>
+	</div>
+
+	<div class="data-privacy-container">
+		<div class="data-privacy-header">
+			<h2 class="privacy-subtitle"><img src="/assets/images/approved.png" alt="" class="privacy-icon"> Application Submitted</h2>
+			<p class="privacy-act-label">Thank you for applying to Colegio de Amore</p>
+		</div>
+
+		<div class="data-privacy-content">
+			<div class="privacy-intro" style="text-align:center;">
+				<p>Your application has been received and is being processed. A confirmation email will be sent to you shortly.</p>
+			</div>
+
+			<div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:24px;">
+				<a href="landing.html" class="btn btn-outline">Back to Home</a>
+				<a href="auth/student-login.php" id="goToStudentLogin" class="btn btn-success">Go to Student Login</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const studentBtn = document.getElementById('goToStudentLogin');
+			if (studentBtn) {
+				studentBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+					window.location.href = 'auth/student-login.php';
+				});
+			}
+		});
+	</script>
+</body>
+</html>
+

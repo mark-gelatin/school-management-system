@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Data Privacy Notice - Colegio de Amore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/student-registration.css">
+    <style>
+        /* ========================================
+           DATA PRIVACY ACT - RESPONSIVE OVERRIDES
+           ======================================== */
+        
+        /* Base responsive container */
+        .data-privacy-container {
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 1.25rem;
+            margin: 5rem auto 1.5rem auto;
+            overflow-x: hidden;
+        }
+        
+        /* Prevent text overflow globally */
+        .data-privacy-container,
+        .data-privacy-container * {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        
+        /* Header responsive styling */
+        .data-privacy-header {
+            padding: 0 0 1.25rem 0;
+            text-align: center;
+        }
+        
+        .privacy-subtitle {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            padding-right: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .privacy-icon {
+            width: clamp(1.5em, 5vw, 2em);
+            height: clamp(1.5em, 5vw, 2em);
+        }
+        
+        .privacy-act-label {
+            font-size: clamp(0.875rem, 3vw, 1rem);
+        }
+        
+        /* Content sections responsive */
+        .data-privacy-content {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .privacy-intro p,
+        .privacy-section p {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            line-height: 1.7;
+        }
+        
+        .privacy-section h2 {
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-section ul {
+            margin-left: 1rem;
+            padding-left: 0.5rem;
+        }
+        
+        .privacy-section li {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            margin-bottom: 0.625rem;
+            line-height: 1.6;
+        }
+        
+        /* Info columns responsive */
+        .info-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .info-column {
+            flex: 1 1 280px;
+            min-width: 0;
+        }
+        
+        .info-column li {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+        }
+        
+        /* Privacy highlight responsive */
+        .privacy-highlight {
+            padding: clamp(0.75rem, 3vw, 1rem);
+            margin: 1.25rem 0;
+        }
+        
+        .privacy-highlight p {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+        }
+        
+        /* Actions section responsive */
+        .data-privacy-actions {
+            padding: 1.25rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .privacy-checkbox-container {
+            padding: clamp(1rem, 4vw, 1.5rem);
+            gap: clamp(0.75rem, 3vw, 1.25rem);
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .privacy-checkbox-container input[type="checkbox"] {
+            width: clamp(1rem, 3vw, 1.25rem);
+            height: clamp(1rem, 3vw, 1.25rem);
+            min-width: 1rem;
+            min-height: 1rem;
+            transform: scale(1.2);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        
+        .privacy-checkbox-container label {
+            font-size: clamp(0.875rem, 2.5vw, 1.1rem);
+            line-height: 1.5;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        
+        /* Button responsive styling */
+        .btn {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            padding: clamp(0.75rem, 2.5vw, 0.875rem) clamp(1.25rem, 4vw, 1.5rem);
+            width: 100%;
+            max-width: 20rem;
+            margin: 0.25rem 0;
+            min-height: 2.75rem;
+            touch-action: manipulation;
+        }
+        
+        .btn-success:disabled {
+            opacity: 0.6;
+        }
+        
+        /* Contact section */
+        .privacy-officer {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+        }
+        
+        /* ========================================
+           MOBILE BREAKPOINTS
+           ======================================== */
+        
+        /* Extra small devices (phones, 320px and up) */
+        @media (max-width: 480px) {
+            .data-privacy-container {
+                margin-top: 3.75rem;
+                padding: 0 0.75rem;
+            }
+            
+            .privacy-subtitle {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .info-columns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .info-column {
+                flex: 1 1 100%;
+            }
+            
+            .privacy-checkbox-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            
+            .privacy-checkbox-container input[type="checkbox"] {
+                margin-bottom: 0.5rem;
+            }
+            
+            .btn {
+                max-width: 100%;
+            }
+            
+            .privacy-section ul {
+                margin-left: 0.5rem;
+            }
+        }
+        
+        /* Small devices (landscape phones, 481px - 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .data-privacy-container {
+                margin-top: 4rem;
+                padding: 0 1rem;
+            }
+            
+            .info-columns {
+                gap: 1.25rem;
+            }
+        }
+        
+        /* Medium devices (tablets, 769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .data-privacy-container {
+                max-width: 90%;
+                padding: 0 1.5rem;
+            }
+        }
+        
+        /* Large devices (desktops, 1025px and up) */
+        @media (min-width: 1025px) {
+            .data-privacy-container {
+                max-width: 900px;
+                padding: 0 2rem;
+            }
+            
+            .btn {
+                width: auto;
+                max-width: none;
+            }
+        }
+        
+        /* Admission header responsive */
+        @media (max-width: 480px) {
+            .admission-header {
+                height: 3rem;
+                padding: 0 0.75rem;
+            }
+            
+            .admission-header-text {
+                font-size: 0.875rem;
+            }
+            
+            .admission-home-icon {
+                width: 1.125rem;
+                height: 1.125rem;
+            }
+            
+            .admission-logo img {
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+        }
+        
+        /* Ensure no horizontal scroll */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        
+        /* Focus states for accessibility */
+        .privacy-checkbox-container input[type="checkbox"]:focus {
+            outline: 2px solid #a11c27;
+            outline-offset: 2px;
+        }
+        
+        .btn:focus {
+            outline: 2px solid #a11c27;
+            outline-offset: 2px;
+        }
+        
+        .btn:focus:not(:focus-visible) {
+            outline: none;
+        }
+        
+        .btn:focus-visible {
+            outline: 2px solid #a11c27;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="data-privacy-page">
+    <div class="admission-header">
+        <a href="landing.html" class="admission-home-icon" aria-label="Go to Home">
+            <img src="/assets/images/home_white.png" alt="">
+        </a>
+        <div class="admission-header-text">Admission Application</div>
+        <div class="admission-logo"><img src="/assets/images/logo.png" alt="Colegio de Amore Logo"></div>
+    </div>
+    <main class="data-privacy-container" role="main">
+        <div class="data-privacy-header">
+            <h1 class="privacy-subtitle"><img src="/assets/images/personal-information.png" alt="" class="privacy-icon" aria-hidden="true"> Data Privacy Notice and Consent Form for Students</h1>
+            <p class="privacy-act-label">Data Privacy Act (R.A. 10173)</p>
+        </div>
+        
+        <article class="data-privacy-content">
+            <section class="privacy-intro">
+                <p>Colegio de Amore is required by law to process your personal information in accordance with Republic Act No. 10173, otherwise known as the Data Privacy Act of 2012. This notice explains how we collect, use, and protect your personal data for admission and enrollment purposes.</p>
+            </section>
+            
+            <section class="privacy-section">
+                <h2>Personal Information Collected and Stored</h2>
+                <p>The Colegio de Amore collects, uses and keeps your personal information, which include but are not limited, to the following:</p>
+                <div class="info-columns">
+                    <div class="info-column">
+                        <ul>
+                            <li>Name, age, date of birth</li>
+                            <li>Address and contact details</li>
+                            <li>Civil Status, Nationality, Religion</li>
+                            <li>Family Profile (Names of parents/guardians, their occupation and contact details, etc.)</li>
+                            <li>Choice of degree program</li>
+                        </ul>
+                    </div>
+                    <div class="info-column">
+                        <ul>
+                            <li>Educational records</li>
+                            <li>Learner reference number (if any)</li>
+                            <li>Geographic information about your household</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="privacy-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use your personal information for the following purposes:</p>
+                <ul>
+                    <li>Processing your admission application</li>
+                    <li>Creating and maintaining your student record</li>
+                    <li>Communicating with you about your application and enrollment</li>
+                    <li>Providing academic services and support</li>
+                    <li>Maintaining academic records and transcripts</li>
+                    <li>Complying with legal and regulatory requirements</li>
+                </ul>
+            </section>
+            
+            <section class="privacy-section">
+                <h2>Data Protection</h2>
+                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                <ul>
+                    <li>Encryption of sensitive data</li>
+                    <li>Secure database systems</li>
+                    <li>Access controls and authentication</li>
+                    <li>Regular security audits and updates</li>
+                </ul>
+            </section>
+            
+            <section class="privacy-section">
+                <h2>Your Rights</h2>
+                <p>Under the Data Privacy Act, you have the following rights:</p>
+                <ul>
+                    <li><strong>Right to be informed:</strong> You have the right to know how your data is being processed</li>
+                    <li><strong>Right to access:</strong> You can request access to your personal data</li>
+                    <li><strong>Right to object:</strong> You can object to the processing of your data</li>
+                    <li><strong>Right to erasure:</strong> You can request the deletion of your data</li>
+                    <li><strong>Right to data portability:</strong> You can request a copy of your data</li>
+                    <li><strong>Right to rectification:</strong> You can request correction of inaccurate data</li>
+                </ul>
+            </section>
+            
+            <aside class="privacy-highlight" role="note">
+                <p><strong>Important:</strong> By proceeding with your application, you consent to the collection, processing, and storage of your personal information as described in this privacy notice. You may withdraw your consent at any time by contacting our Data Protection Officer.</p>
+            </aside>
+            
+            <section class="privacy-section">
+                <h2>Contact Information</h2>
+                <p>If you have any questions about this privacy notice or wish to exercise your rights under the Data Privacy Act, please contact:</p>
+                
+                <p class="privacy-officer">Gol D. Roger</p>
+                <address>
+                    <strong>Data Protection Officer</strong><br>
+                    Colegio de Amore<br>
+                    Email: <a href="mailto:privacy@colegiodeamore.edu">privacy@colegiodeamore.edu</a><br>
+                    Phone: (02) 123-4567
+                </address>
+            </section>
+        </article>
+        
+        <div class="data-privacy-actions">
+            <div class="privacy-checkbox-container">
+                <input 
+                    type="checkbox" 
+                    id="agreeCheckbox" 
+                    name="agreePrivacy"
+                    required
+                    aria-describedby="consent-description"
+                    aria-checked="false"
+                >
+                <label for="agreeCheckbox" id="consent-description">I have read and understood the Data Privacy Act (R.A. 10173) and agree to the collection and processing of my personal information as described above.</label>
+            </div>
+            
+            <button 
+                id="proceedBtn" 
+                class="btn btn-success" 
+                type="button" 
+                disabled
+                aria-disabled="true"
+            >I Agree - Proceed to Registration</button>
+            <a href="landing.html" class="btn btn-outline">Back to Home</a>
+        </div>
+    </main>
+    
+    <script src="/assets/js/student-registration.js"></script>
+    <script>
+        // Inline script to ensure checkbox functionality works immediately
+        (function() {
+            'use strict';
+            
+            function initPrivacyConsent() {
+                const checkbox = document.getElementById('agreeCheckbox');
+                const button = document.getElementById('proceedBtn');
+                
+                if (!checkbox || !button) {
+                    console.warn('Privacy consent elements not found');
+                    return;
+                }
+                
+                // Update button state based on checkbox
+                function updateButtonState() {
+                    const isChecked = checkbox.checked;
+                    
+                    // Update aria-checked attribute
+                    checkbox.setAttribute('aria-checked', isChecked.toString());
+                    
+                    // Update button disabled state
+                    button.disabled = !isChecked;
+                    button.setAttribute('aria-disabled', (!isChecked).toString());
+                    
+                    // Update button styles
+                    if (isChecked) {
+                        button.style.opacity = '1';
+                        button.style.cursor = 'pointer';
+                        button.style.background = 'linear-gradient(135deg, #a11c27 0%, #b31310 100%)';
+                        button.style.color = 'white';
+                        button.style.boxShadow = '0 4px 12px rgba(161, 28, 39, 0.3)';
+                    } else {
+                        button.style.opacity = '0.6';
+                        button.style.cursor = 'not-allowed';
+                        button.style.background = '#e9ecef';
+                        button.style.color = '#6c757d';
+                        button.style.boxShadow = 'none';
+                    }
+                }
+                
+                // Listen for checkbox changes
+                checkbox.addEventListener('change', updateButtonState);
+                
+                // Handle button click
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (checkbox.checked) {
+                        // Redirect to registration portal
+                        window.location.href = 'student/student-registration-portal.php';
+                    } else {
+                        alert('Please agree to the Data Privacy Act (R.A. 10173) before proceeding.');
+                    }
+                });
+                
+                // Initialize state on page load
+                updateButtonState();
+            }
+            
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initPrivacyConsent);
+            } else {
+                initPrivacyConsent();
+            }
+        })();
+    </script>
+</body>
+</html>
